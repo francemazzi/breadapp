@@ -1,7 +1,7 @@
 import "./SchedaProdotto.css";
 import { ButtonAdd } from "./Button.js";
 
-const SchedaProdotto = ({ product }) => {
+const SchedaProdotto = ({ product, addProductToCart }) => {
   return (
     <div key={product.id} className="schedaContainer">
       <div className="fotoProdotto">
@@ -10,7 +10,9 @@ const SchedaProdotto = ({ product }) => {
       <div className="titoloProdotto">{product.title}</div>
       <div className="Prezzo">{product.price}€</div>
 
-      <ButtonAdd>Aggiungi</ButtonAdd>
+      <ButtonAdd product={product} addProductToCart={addProductToCart}>
+        Aggiungi
+      </ButtonAdd>
     </div>
   );
 };

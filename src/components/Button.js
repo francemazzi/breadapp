@@ -11,10 +11,16 @@ const ButtonCart = (props) => {
   );
 };
 
-const ButtonAdd = (props) => {
+const ButtonAdd = (props, product, addProductToCart) => {
   return (
     <div className="btnContainer">
-      <button className="btn add">{props.children}</button>
+      <button
+        className="btn add"
+        onClick={() => addProductToCart(product)}
+        id={product.id}
+      >
+        {props.children}
+      </button>
     </div>
   );
 };

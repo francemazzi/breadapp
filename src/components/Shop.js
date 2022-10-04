@@ -2,7 +2,7 @@ import "./Shop.css";
 import ProductList from "./ProductList";
 import { useState, useEffect } from "react";
 
-const Shop = () => {
+const Shop = ({ addProductToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const Shop = () => {
 
   return (
     <>
-      <ProductList products={products} />
+      <ProductList products={products} addProductToCart={addProductToCart} />
     </>
   );
 };
