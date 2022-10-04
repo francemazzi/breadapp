@@ -1,8 +1,9 @@
 import "./App.css";
 import HeaderUno from "./components/Header";
 import SlideUno from "./components/Homepage";
+import Cart from "./components/Cart";
 import Shop from "./components/Shop";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { GetCookie, SetCookie } from "./hooks/cookies.js";
 import { useState, useEffect } from "react";
 
@@ -36,6 +37,10 @@ function App() {
             path="/shop"
             element={<Shop />}
             addProductToCart={addProductToCart}
+          />
+          <Route
+            path="/carrello"
+            element={<Cart cart={cart} setCart={setCart} />}
           />
         </Routes>
       </>

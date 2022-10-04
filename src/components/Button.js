@@ -2,11 +2,12 @@ import "./button.css";
 import { Link } from "react-router-dom";
 
 //btn cart
-const ButtonCart = (props) => {
+const ButtonCart = (props, product, addProductToCart) => {
+  console.log(addProductToCart);
   return (
     <div className="btnContainer">
       <button className="btn add">{props.children}</button>
-      <div className="notifica">1</div>
+      <div className="notifica">0</div>
     </div>
   );
 };

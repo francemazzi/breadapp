@@ -9,7 +9,9 @@ const HeaderUno = () => {
         <div className="titoloHeader">Breadapp</div>
       </Link>
       <div className="cart">
-        <ButtonCart>🛒</ButtonCart>
+        <Link to="carrello">
+          <ButtonCart>🛒</ButtonCart>
+        </Link>
       </div>
     </div>
   );
