@@ -1,0 +1,35 @@
+.productList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.schedaContainer {
+  display: flex;
+  margin: 1rem;
+  width: 15rem;
+  padding: 20px;
+  border-radius: 12px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 0px 30px -16px rgb(0 0 0 / 60%);
+}
+.fotoProdotto {
+  box-shadow: 0px 0px 30px -16px rgb(0 0 0 / 20%);
+  border-radius: 12px;
+}
+.fotoProdotto > img {
+  height: 9rem;
+  width: 98%;
+}
+.titoloProdotto {
+  font-size: 20px;
+  text-align: center;
+}
+.Prezzo {
+  margin: 20px;
+  font-weight: 800;
+}
