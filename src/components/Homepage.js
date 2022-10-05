@@ -1,5 +1,5 @@
 import "./Homepage.css";
-import { ButtonLink } from "./Button.js";
+import ButtonLink from "./Button.js";
 
 const SlideUno = () => {
   return (

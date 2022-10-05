@@ -1,7 +1,7 @@
 import "./ProductList.css";
 import SchedaProdotto from "./SchedaProdotto";
 
-const ProductList = ({ products, addProductToCart }) => {
+const ProductList = ({ products, IncremetCart }) => {
   return (
     <div className="productList">
       {products.map((product) => (
@@ -9,7 +9,7 @@ const ProductList = ({ products, addProductToCart }) => {
           ProductListItem
           key={product.id}
           product={product}
-          addProductToCart={addProductToCart}
+          IncremetCart={IncremetCart}
         />
       ))}
     </div>

@@ -2,19 +2,21 @@ import "./Shop.css";
 import ProductList from "./ProductList";
 import { useState, useEffect } from "react";
 
-const Shop = ({ addProductToCart }) => {
+const Shop = ({ IncremetCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
+      .then(async (response) => {
+        const data = await response.json();
+        setProducts(data);
+      })
       .catch((e) => console.log(e));
   }, []);
 
   return (
     <>
-      <ProductList products={products} addProductToCart={addProductToCart} />
+      <ProductList products={products} IncremetCart={IncremetCart} />
     </>
   );
 };

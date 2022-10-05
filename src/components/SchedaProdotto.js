@@ -1,7 +1,6 @@
 import "./SchedaProdotto.css";
-import { ButtonAdd } from "./Button.js";
 
-const SchedaProdotto = ({ product, addProductToCart }) => {
+const SchedaProdotto = ({ product, IncremetCart }) => {
   return (
     <div key={product.id} className="schedaContainer">
       <div className="fotoProdotto">
@@ -9,10 +8,15 @@ const SchedaProdotto = ({ product, addProductToCart }) => {
       </div>
       <div className="titoloProdotto">{product.title}</div>
       <div className="Prezzo">{product.price}€</div>
-
-      <ButtonAdd product={product} addProductToCart={addProductToCart}>
-        Aggiungi
-      </ButtonAdd>
+      <div className="btnContainer">
+        <button
+          className="btn add"
+          onClick={() => IncremetCart(product)}
+          id={product.id}
+        >
+          Aggiungi
+        </button>
+      </div>
     </div>
   );
 };
